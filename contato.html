@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>LÊMEM KOFFIE</h1>
+        <p>O ELEGANTE AROMA DO CAFÉ PARA TODOS OS MOMENTOS.</p>
+        <img src="lemen.png" alt="" class="logo">
+      
+        <nav>
+            <ul>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="vagas.html">Trabalhe Conosco</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="fluxograma.html">Fluxograma </a></li> </ul>
+        </nav>
+    </header>
+
+
+        <section class="formulario">
+            <h1>Entre em Contato</h1>
+            <p>Caso tenha interesse em fazer parte da nossa empresa. Preencha os campos.</p>
+            <form id="formContato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+    
+                <input type="button" value="Enviar" onclick="enviarFormulario()">
+            </form>
+        </section>
+    
+        <script>
+            function enviarFormulario() {
+                var formulario = document.getElementById("formContato");
+                var dados = new FormData(formulario);
+    
+                fetch("processar_formulario.php", {
+                    method: "POST",
+                    body: dados
+                })
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error("Erro ao enviar o formulário.");
+                    }
+                    return response.text();
+                })
+                .then(function(data) {
+                    alert("Dados enviados com sucesso: " + data);
+                    formulario.reset();
+                })
+                .catch(function(error) {
+                    console.error("Erro:", error);
+                    alert("Ocorreu um erro ao enviar o formulário.");
+                });
+            }
+        </script>
+    </body>
+    </html>

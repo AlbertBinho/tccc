@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Café Gourmet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Clube de Café Gourmet</h1>
+            <nav>
+
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="vagas.html">Trabalhe Conosco</a></li>
+                <li><a href="clube.html">Clube</a></li>
+                <li><a href="parceiros.html">Parceiros</a></li>
+                <ul>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#assinatura">Assinatura</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="card">
+                <img src="cafe1.jpg" alt="Café Expresso">
+                <h3>Café Expresso</h3>
+                <p>Uma mistura rica e intensa para amantes de café forte.</p>
+                <p class="preco">R$ 30,00</p>
+            </div>
+            <div class="card">
+                <img src="cafe2.jpg" alt="Café Mocha">
+                <h3>Café Mocha</h3>
+                <p>Uma combinação deliciosa de café com chocolate.</p>
+                <p class="preco">R$ 35,00</p>
+            </div>
+            <div class="card">
+                <img src="cafe3.jpg" alt="Café Latte">
+                <h3>Café Latte</h3>
+                <p>Café suave com leite cremoso.</p>
+                <p class="preco">R$ 28,00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="assinatura">
+        <div class="container">
+            <h2>Assinatura Mensal</h2>
+            <p>Assine o nosso clube e aproveite descontos exclusivos em todos os nossos produtos!</p>
+            <div class="assinatura-info">
+                <p class="valor">R$ 19,90/mês</p>
+                <p class="beneficios">Com a assinatura, você tem:</p>
+                <ul>
+                    <li>Desconto de 20% em todos os produtos</li>
+                    <li>Entrega gratuita</li>
+                    <li>Acesso a edições limitadas</li>
+                </ul>
+                <button>Assine Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Tem alguma dúvida? Entre em contato conosco!</p>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Clube de Café Gourmet. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
